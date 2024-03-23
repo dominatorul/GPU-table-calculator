@@ -25,5 +25,5 @@ This script is provided for informational purposes only. Its accuracy and compat
 **Credits:**
 
 * **NVIDIA Corporation** for Tegra X1 manual
-* **hanai3Bi/meha** for the previous calculator
+* **hanai3Bi/meha[https://github.com/hanai3Bi]** for the previous calculator
 * **B3711** for his UV2 table
