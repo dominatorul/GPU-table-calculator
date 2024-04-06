@@ -1,14 +1,13 @@
-# UV3-Calculator: Custom GPU Table Calculator
+# Custom GPU UV3 Table Calculator
 
 This script calculates the voltage required for a specific GPU frequency based on a predefined lookup table. It is designed specifically for NVIDIA Tegra X1 (Erista) and NVIDIA Tegra X1+ (Mariko) GPUs.
-
 ## Disclaimer
 
 This script is provided for informational purposes only. Its accuracy and compatibility with specific hardware configurations are not guaranteed. Please consult the Tegra GPU documentation for more information.
 
 To provide clearer instructions on how to run a Python script, you can follow these steps:
 
-### Instructions for Running the Python Script:
+### Instructions to run the Python code locally:
 
 1. **Install Python**: If you haven't already, install Python on your system. You can download Python from the official website: [Python Downloads](https://www.python.org/downloads/).
 
@@ -53,5 +52,5 @@ The script will display a table with supported GPU frequencies and their corresp
 **Credits:**
 
 * **NVIDIA Corporation** for Tegra X1 manual
-* **hanai3Bi/meha[https://github.com/hanai3Bi]** for the previous calculator
+* **[hanai3Bi/meha](https://github.com/hanai3Bi)** for the previous calculator
 * **B3711** for his UV2 table
