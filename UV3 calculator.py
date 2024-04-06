@@ -65,6 +65,7 @@ def get_voltage(speedo, freq_index, temp_index):
     return int(final_volt)
 
 speedo = int(input("Input GPU speedo: "))
+warnings = []
 
 if speedo > 1800:
     print("This is for Mariko only, Erista users aren't allowed here.")
@@ -77,4 +78,16 @@ else:
     for i, freq in enumerate(gpu_freq_table):
         if freq >= 691000: 
             voltage = get_voltage(speedo, i, 3) 
+            if freq == 1228800 and voltage > 800:
+                warnings.append(f"Warning: Voltage for {freq / 1000} MHz can exceed PMIC limit!")
+            elif freq == 1267200 and voltage > 790:
+                warnings.append(f"Warning: Voltage for {freq / 1000} MHz can exceed PMIC limit!")
+            elif freq == 1305600 and voltage > 780:
+                warnings.append(f"Warning: Voltage for {freq / 1000} MHz can exceed PMIC limit!")
             print(f"{freq / 1000} MHz\t\t{voltage} mV")
+
+for warning in warnings:
+    print(warning)
+
+
+
