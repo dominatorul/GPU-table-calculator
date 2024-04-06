@@ -1,7 +1,11 @@
 # UV3-calculator
 A Pretty Good Custom GPU Table Calculator
 
-This code calculates the voltage required for a specific GPU frequency and temperature based on a predefined lookup table.
+This code calculates the voltage required for a specific GPU frequency based on a predefined lookup table.
+
+**Disclaimer:**
+
+This script is provided for informational purposes only. Its accuracy and compatibility with specific hardware configurations are not guaranteed. It is recommended to consult the Tegra GPU documentation.
 
 **How to Use:**
 
@@ -18,9 +22,6 @@ The script will display a table with supported GPU frequencies and their corresp
 * The script provides a warning for speedo values below 1400, potentially indicating compatibility limitations.
 * For frequencies below 691.2 MHz, the script recommends using a user-defined minimum voltage (vmin) or the voltage value for 691.2 MHz.
 
-**Disclaimer:**
-
-This script is provided for informational purposes only. Its accuracy and compatibility with specific hardware configurations are not guaranteed. It is recommended to consult the Tegra GPU documentation.
 
 **Credits:**
 
