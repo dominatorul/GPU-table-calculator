@@ -29,7 +29,7 @@ def round5(number):
 
 speedo = int(input("Enter gpu speedo: ")) 
 
-offset = 60 if speedo < 2060 else 80
+offset = 60 if speedo <= 2060 else 80
 
 for i in range(13):
     cvb_coeff[i] -= offset * 1000
