@@ -1,6 +1,9 @@
 # Custom GPU UV3 Table Calculator
 
+## Please use this **ONLY** as a reference; your actual values may be 5 to 10 mV (for Mariko) or 5 to 30 mV (for Erista) lower than the table indicates due to various factors.
+
 This script calculates the voltage required for a specific GPU frequency based on a predefined lookup table. It is designed specifically for NVIDIA Tegra X1 (Erista) and NVIDIA Tegra X1+ (Mariko) GPUs.
+
 ## Disclaimer
 
 This script is provided for informational purposes only. Its accuracy and compatibility with specific hardware configurations are not guaranteed. Please consult the Tegra GPU documentation for more information.
