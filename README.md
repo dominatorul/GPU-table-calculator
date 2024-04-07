@@ -1,4 +1,4 @@
-# A pretty good switch custom table calculator
+# A pretty good custom table calculator for Switch
 
 ## Please use this **ONLY** as a reference; your actual values may be 5 to 20 mV (for Mariko) or 5 to 50 mV (for Erista) lower than the table indicates due to various factors.
 
