@@ -5,8 +5,6 @@ This script calculates the voltage required for a specific GPU frequency based o
 
 This script is provided for informational purposes only. Its accuracy and compatibility with specific hardware configurations are not guaranteed. Please consult the Tegra GPU documentation for more information.
 
-To provide clearer instructions on how to run a Python script, you can follow these steps:
-
 ### Instructions to run the Python code locally:
 
 1. **Install Python**: If you haven't already, install Python on your system. You can download Python from the official website: [Python Downloads](https://www.python.org/downloads/).
