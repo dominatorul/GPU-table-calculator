@@ -26,11 +26,11 @@ This script is provided for informational purposes only. Its accuracy and compat
 
 5. **Run the Script**: Once you're in the directory containing the script files, execute the script by typing:
    ```
-   python UV3_calculator.py
+   python GPU_table_calculator_mariko.py
    ```
    or
    ```
-   python UV3_calculator_erista.py
+   python GPU_table_calculator_erista.py
    ```
 
 6. **Follow Prompts**: When prompted, enter the GPU speedo value, which is a performance metric.
