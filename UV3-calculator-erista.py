@@ -29,28 +29,34 @@ def round5(number):
 
 speedo = int(input("Enter gpu speedo: ")) 
 
-offset = 130  
+offset = 60 if speedo < 2060 else 100
 
 for i in range(13):
     cvb_coeff[i] -= offset * 1000
 
-print("\nFrequency (MHz)\tVoltage (mV)")
-for entry in range(13):
-    freq_MHz = float(gpu_freq_table[entry] / 1000)
+if speedo < 1900:
+    print("This is for Erista only, Mariko users aren't allowed here.")
+elif speedo > 2200:
+    print("How did this SoC end up in a switch?")
+else:
+    print("\nFrequency (MHz)\tVoltage (mV)")
+    for entry in range(13):
+        freq_MHz = float(gpu_freq_table[entry] / 1000)
 
-    mv = round_closest(-940 * speedo, 100)
-    mv = round_closest((mv + 8144) * speedo, 100) + cvb_coeff[entry]
+        mv = round_closest(-940 * speedo, 100)
+        mv = round_closest((mv + 8144) * speedo, 100) + cvb_coeff[entry]
 
-    temp = 50  
+        temp = 50  
 
-    mvt = round_closest(808 * speedo, 100) + -21583 + round_closest(226 * temp, 10)
-    mvt = round_closest(mvt * temp, 10)
-    final_volt = math.ceil((mv + mvt) / 1000)
-    vmin = 750 if freq_MHz <= 537 else 780 if freq_MHz == 614 else 800 if freq_MHz == 691 else 830 if freq_MHz == 768 else 855 if freq_MHz == 844 else 880 if freq_MHz == 921 else 915 if freq_MHz == 998 else 812
-    final_volt = max(final_volt, vmin)
-    final_volt = round5(final_volt)
-    
-    if freq_MHz == 691.2:
-        print(f"76.8-691.2 MHz\t{final_volt} mV")
-    elif freq_MHz > 691.2:
-        print(f"{freq_MHz} MHz\t{final_volt} mV")
+        mvt = round_closest(808 * speedo, 100) + -21583 + round_closest(226 * temp, 10)
+        mvt = round_closest(mvt * temp, 10)
+        final_volt = math.ceil((mv + mvt) / 1000)
+        vmin = 750 if freq_MHz <= 537 else 780 if freq_MHz == 614 else 800 if freq_MHz == 691 else 830 if freq_MHz == 768 else 855 if freq_MHz == 844 else 880 if freq_MHz == 921 else 915 if freq_MHz == 998 else 812
+        final_volt = max(final_volt, vmin)
+        final_volt = round5(final_volt)
+        
+        if freq_MHz == 691.2:
+            print(f"76.8-691.2 MHz\t{final_volt} mV")
+        elif freq_MHz > 691.2:
+            print(f"{freq_MHz} MHz\t{final_volt} mV")
+
